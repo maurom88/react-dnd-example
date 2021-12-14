@@ -26,9 +26,9 @@
 }
 
 .App-cards-title {
-
 }
 
 .App-cards-list {
-
+  border-style: solid;
+  min-height: 20%;
 }

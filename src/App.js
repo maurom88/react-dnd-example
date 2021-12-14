@@ -11,17 +11,17 @@ export default function App() {
 
   return (
     <div className="App">
-      <div>
-        <h2>Draggable cards</h2>
-        <div>
+      <div className="App-section">
+        <h2 className="App-cards-title">Draggable cards</h2>
+        <div className="App-cards-list">
           {draggableCards.map((card) => (
             <Card id={card.id} name={card.name} content={card.content} />
           ))}
         </div>
       </div>
-      <div>
-        <h2>Droppable area</h2>
-        <div></div>
+      <div className="App-section">
+        <h2 className="App-cards-title">Droppable area</h2>
+        <div className="App-cards-list"></div>
       </div>
     </div>
   );

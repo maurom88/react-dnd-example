@@ -2,7 +2,7 @@ import React from "react";
 
 const cardStyle = {
     borderStyle: "solid",
-    width: "50%",
+    minWidth: "20%",
 }
 
 export default function Card({ id, name, content }) {

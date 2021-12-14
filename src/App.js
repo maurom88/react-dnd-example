@@ -11,7 +11,14 @@ export default function App() {
     <div className="App">
       <div>
         <h2>Draggable cards</h2>
-        <div></div>
+        <div>
+          {draggableCards.map((card) => (
+            <div key={card.id}>
+              <h5>{card.name}</h5>
+              <p>{card.content}</p>
+            </div>
+          ))}
+        </div>
       </div>
       <div>
         <h2>Droppable area</h2>

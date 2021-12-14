@@ -21,7 +21,11 @@ export default function App() {
       </div>
       <div className="App-section">
         <h2 className="App-cards-title">Droppable area</h2>
-        <div className="App-cards-list"></div>
+        <div className="App-cards-list">
+        {droppableCards.map((card) => (
+            <Card id={card.id} name={card.name} content={card.content} />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import Card from "./Card";
+
 import { mockDraggableCards } from "./mockData";
 import "./App.css";
 
@@ -13,10 +15,7 @@ export default function App() {
         <h2>Draggable cards</h2>
         <div>
           {draggableCards.map((card) => (
-            <div key={card.id}>
-              <h5>{card.name}</h5>
-              <p>{card.content}</p>
-            </div>
+            <Card id={card.id} name={card.name} content={card.content} />
           ))}
         </div>
       </div>

@@ -9,14 +9,12 @@ import "./App.css";
 
 export default function App() {
   const [draggableCards, setDraggableCards] = useState(mockDraggableCards);
-  const [droppableCards, setDroppableCards] = useState([]);
 
   return (
     <DndProvider backend={HTML5Backend}>
-    <div className="App">
-      <Section title="Draggable cards" cards={draggableCards} />
-      <Section title="Droppable cards" cards={droppableCards} />
-    </div>
+      <div className="App">
+        <Section title="Draggable cards" cards={draggableCards} />
+      </div>
     </DndProvider>
   );
 }

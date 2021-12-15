@@ -7,7 +7,7 @@ const cardStyle = {
 };
 
 export default function Card({ id, name, content }) {
-  const [collected, drag] = useDrag(() => ({
+  const [{}, drag] = useDrag(() => ({
     type: "card",
     item: { id },
   }));

@@ -4,7 +4,7 @@ import { useDrop } from "react-dnd";
 import Card from "./Card";
 
 export default function Section({ title, cards }) {
-  const [collectedProps, drop] = useDrop(() => ({
+  const [{}, drop] = useDrop(() => ({
     accept: "card",
   }));
 

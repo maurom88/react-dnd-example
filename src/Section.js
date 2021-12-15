@@ -1,9 +1,11 @@
-import React from "react";
-import update from 'immutability-helper'
+import React, { useState } from "react";
+import update from "immutability-helper";
 
+import { mockDraggableCards } from "./mockData";
 import Card from "./Card";
 
-export default function Section({ title, cards }) {
+export default function Section({ title }) {
+  const [cards, setCards] = useState(mockDraggableCards);
 
   return (
     <div className="App-section">

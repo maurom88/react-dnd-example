@@ -1,4 +1,6 @@
 import React from "react";
+import update from 'immutability-helper'
+
 import { useDrop } from "react-dnd";
 
 import Card from "./Card";

@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import { useDrag, useDrop } from "react-dnd";
 
+import Box from "@mui/material/Box";
+
 const cardStyle = {
   borderStyle: "solid",
   minWidth: "20%",
@@ -72,8 +74,10 @@ export default function Card({ id, name, content, index, moveCard }) {
       key={id}
       data-handler-id={handlerId}
     >
-      <h5>{name}</h5>
-      <p>{content}</p>
+      <Box sx={{ minWidth: 275 }}>
+        <h5>{name}</h5>
+        <p>{content}</p>
+      </Box>
     </div>
   );
 }

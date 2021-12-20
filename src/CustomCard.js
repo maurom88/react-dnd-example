@@ -2,13 +2,28 @@ import React, { useRef } from "react";
 import { useDrag, useDrop } from "react-dnd";
 
 import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
 
 const cardStyle = {
   borderStyle: "solid",
-  minWidth: "20%",
 };
 
-export default function Card({ id, name, content, index, moveCard }) {
+export default function CustomCard({ id, name, content, index, moveCard }) {
+  const card = (
+    <React.Fragment>
+      <CardContent>
+        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+          {name}
+        </Typography>
+        <Typography variant="body2">
+          {content}
+        </Typography>
+      </CardContent>
+    </React.Fragment>
+  );
+
   const ref = useRef(null);
   const [{ handlerId }, drop] = useDrop({
     accept: "card",
@@ -75,8 +90,7 @@ export default function Card({ id, name, content, index, moveCard }) {
       data-handler-id={handlerId}
     >
       <Box sx={{ minWidth: 275 }}>
-        <h5>{name}</h5>
-        <p>{content}</p>
+        <Card variant="outlined">{card}</Card>
       </Box>
     </div>
   );

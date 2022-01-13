@@ -1,3 +1,11 @@
+# A simple React DND (drag and drop) example
+
+- To run the project, follow the standart Create React App instruction (see below).
+- How it works: simply drag and drop cards to reorder them.
+- Nothing else to see!
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
